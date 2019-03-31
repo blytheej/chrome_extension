@@ -1,0 +1,19 @@
+{
+  "name": "ForYourTime",
+  "version": "1.0",
+  "description": "Stop",
+  "manifest_version": 2,
+  "browser_action":{
+    "default_icon" : "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts":[{
+    "matches":["<all_urls>"],
+      "js": ["content.js"],
+      "css":["content.css"],
+    "run_at": "document_end"
+  }],
+  "permissions": [
+    "activeTab"
+  ]
+}
